@@ -1,0 +1,76 @@
+version: '3'
+services:
+  db:
+    # 起動するイメージを指定する
+    # 使えるimageをdokcer-hubで探さないとエラーが出る
+    image: mysql:8.0.30
+
+    # 環境変数を設定する
+    environment:
+      - MYSQL_ROOT_HOST=${DB_ROOT_HOST}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+      - MYSQL_ROOT_PASSWORD=${DB_PASS}
+      - TZ=${TZ}
+
+    # ホスト側のポート：コンテナのポート
+    ports:
+      - '3307:3306'
+
+    # ボリュームバインド
+    platform: linux/amd64
+    volumes:
+      - ./db/conf:/etc/mysql/conf.d/:ro
+      - mysqldata:/var/lib/mysql
+      - ./db/logs/var/log/mysql
+      - ./mysql/:/docker-entrypoint-initdb.d/
+
+    build:
+      context: .
+      dockerfile: ./db/docker/Dockerfile
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+    # 使用するネットワーク
+    networks:
+      - backend
+
+  api:
+    image: node:14.8.0
+    environment:
+      - MYSQL_SERVER=db
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+      - MYSQL_DATABASE=${DB_NAME}
+      - TZ=${TZ}
+      - CHOKIDAR_USEPOLLING=true
+
+    # コンテナを起動させ続けるように設定する
+    tty: true
+
+    ports:
+      - '3000:3000'
+
+    # ソースコードを格納するフォルダをマウント
+    # （ホスト側の./apiをコンテナの/appにマウント）
+
+    volumes:
+      - ./api:/app
+
+    # 起動時のカレントフォルダを指定
+    working_dir: /app
+
+    # 起動後に実行するコマンドを指定
+    command: npm run dev
+
+    networks:
+      - backend
+
+    # 依存関係（apiコンテナより先にdbコンテナが起動するように設定）
+    depends_on:
+      - db
+networks:
+  backend:
+
+volumes:
+  mysqldata:
