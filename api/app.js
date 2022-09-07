@@ -20,6 +20,11 @@ app.use(accesslogger());
 
 // Dynamic resource rooting.
 app.use("/", require("./routes/index.js"));
+app.use("/test", async (req, res, next) => {
+  const {promisify} = require('util');
+  const path = require("path");
+  const { sql } = require('@garafu/mysql-fileloader')({root: path.join(__dirname, "./lib/database/sql")});
+});
 
 // Set application log.
 app.use(applicationlogger());
