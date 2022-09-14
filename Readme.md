@@ -19,3 +19,8 @@ docker rm コンテナ名
 ```
 docker rmi イメージID
 ```
+
+### dockerの立ち上げ
+```
+docker compose up
+```

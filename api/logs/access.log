@@ -1,2 +1,2 @@
-[2022-09-04T08:26:28.809] [WARN] access - ::ffff:172.23.0.1 - - "GET / HTTP/1.1" 304 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
-[2022-09-04T11:15:47.471] [ERROR] access - ::ffff:172.24.0.1 - - "GET /search?keyword=asgsa HTTP/1.1" 404 145 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+[2022-09-15T08:17:24.686] [INFO] access - ::ffff:172.19.0.1 - - "GET /test HTTP/1.1" 200 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+[2022-09-15T08:22:59.566] [INFO] access - ::ffff:172.19.0.1 - - "GET /test HTTP/1.1" 200 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"

@@ -1,0 +1,35 @@
+[2022-09-14T23:13:04.807] [INFO] application - Application listening at :3000
+[2022-09-14T23:13:21.304] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:15:09.082] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:17:48.985] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:18:34.275] [INFO] application - Application listening at :3000
+[2022-09-14T23:18:40.070] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:21:38.771] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:23:31.047] [INFO] application - Application listening at :3000
+[2022-09-14T23:23:35.627] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:23:41.713] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:24:13.528] [INFO] application - Application listening at :3000
+[2022-09-14T23:24:17.394] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:24:20.026] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:24:21.071] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:26:19.663] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:26:21.681] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:26:49.768] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:27:59.009] [INFO] application - Application listening at :3000
+[2022-09-14T23:28:02.821] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:28:45.071] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:30:54.808] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:37:14.101] [INFO] application - Application listening at :3000
+[2022-09-14T23:38:35.828] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:39:30.187] [INFO] application - Application listening at :3000
+[2022-09-14T23:39:37.990] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:41:05.895] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:44:36.347] [INFO] application - Application listening at :3001
+[2022-09-14T23:47:35.916] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:48:03.043] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
+[2022-09-14T23:51:03.439] [INFO] application - Application listening at :3000
+[2022-09-14T23:51:09.591] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:54:11.613] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:56:12.871] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3306
+[2022-09-14T23:56:43.251] [INFO] application - Application listening at :3000
+[2022-09-14T23:57:33.541] [INFO] application - Application listening at :3000

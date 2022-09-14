@@ -20,10 +20,23 @@ app.use(accesslogger());
 
 // Dynamic resource rooting.
 app.use("/", require("./routes/index.js"));
+
+// testを出力する
 app.use("/test", async (req, res, next) => {
-  const {promisify} = require('util');
-  const path = require("path");
-  const { sql } = require('@garafu/mysql-fileloader')({root: path.join(__dirname, "./lib/database/sql")});
+  // promisifyは非同期化するためのメソッド
+  const { MySQLClient, sql } = require('./lib/database/client')
+
+  let data;
+  try {
+    await MySQLClient.connect();
+    data = await MySQLClient.query(await sql("SELECT_SHOP_BASIC_BY_ID"));
+    console.log(data);
+
+  } catch (err){
+    next(err)
+    console.log('成功しmさいた')
+  }
+  res.end('OK');
 });
 
 // Set application log.
