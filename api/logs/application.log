@@ -1,1 +1,15 @@
-[2022-09-15T08:17:18.298] [INFO] application - Application listening at :3000
+[2022-09-16T06:51:38.180] [INFO] application - Application listening at :3000
+[2022-09-16T14:51:40.036] [INFO] application - Application listening at :3000
+[2022-09-16T14:51:49.622] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:54:29.014] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:54:32.237] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:54:33.047] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:54:56.088] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:54:57.424] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:54:57.978] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:55:44.916] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:55:46.024] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T14:55:53.575] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T15:12:22.218] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T15:12:29.662] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
+[2022-09-16T15:17:42.150] [INFO] application - Application listening at :3000

@@ -7,9 +7,20 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const app = express();
 
+const shopRouter = require('./routes/shop');
+
 // Express settings
 app.set("view engine", "ejs");
 app.disable("x-powered-by");
+
+
+
+// localsでデータが消えずに保存される
+app.use((req, res, next) => {
+  res.locals.moment = require("moment");
+  res.locals.padding = require("./lib/math/math").padding;
+  next();
+});
 
 // Static resource rooting.
 app.use(favicon(path.join(__dirname, "/public/favicon.ico")));
@@ -22,22 +33,24 @@ app.use(accesslogger());
 app.use("/", require("./routes/index.js"));
 
 // testを出力する
-app.use("/test", async (req, res, next) => {
-  // promisifyは非同期化するためのメソッド
-  const { MySQLClient, sql } = require('./lib/database/client')
+// app.use("/test", async (req, res, next) => {
+//   // promisifyは非同期化するためのメソッド
+//   const { MySQLClient, sql } = require('./lib/database/client')
+//
+//   let data;
+//   try {
+//     data = await MySQLClient.executeQuery(await sql("SELECT_SHOP_BASIC_BY_ID"), [1]);
+//     // data = await MySQLClient.query(await sql("SELECT_SHOP_BASIC_BY_ID"), [1]);
+//     console.log(data);
+//     console.log('接続に成功しました')
+//   } catch (err){
+//     next(err)
+//   }
+//   res.end('OK');
+// });
 
-  let data;
-  try {
-    await MySQLClient.connect();
-    data = await MySQLClient.query(await sql("SELECT_SHOP_BASIC_BY_ID"));
-    console.log(data);
-
-  } catch (err){
-    next(err)
-    console.log('成功しmさいた')
-  }
-  res.end('OK');
-});
+// shopを出力する
+app.use("/shops", shopRouter);
 
 // Set application log.
 app.use(applicationlogger());
