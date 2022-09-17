@@ -50,6 +50,7 @@ services:
 
     ports:
       - '3000:3000'
+      - "9229:9229"
 
     # ソースコードを格納するフォルダをマウント
     # （ホスト側の./apiをコンテナの/appにマウント）
@@ -62,7 +63,7 @@ services:
 
     # 起動後に実行するコマンドを指定
     command: npm run dev
-
+#    command: npm run start:debug
     networks:
       - backend
 

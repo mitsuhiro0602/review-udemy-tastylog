@@ -1,15 +1,260 @@
-[2022-09-16T06:51:38.180] [INFO] application - Application listening at :3000
-[2022-09-16T14:51:40.036] [INFO] application - Application listening at :3000
-[2022-09-16T14:51:49.622] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:54:29.014] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:54:32.237] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:54:33.047] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:54:56.088] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:54:57.424] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:54:57.978] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:55:44.916] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:55:46.024] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T14:55:53.575] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T15:12:22.218] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T15:12:29.662] [ERROR] application - Failed to lookup view "./shop/index.ejs" in views directory "/app/views"
-[2022-09-16T15:17:42.150] [INFO] application - Application listening at :3000
+[2022-09-17T12:10:44.512] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:12:16.204] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review"
+[2022-09-17T12:12:23.909] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:12:25.478] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:14:56.614] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:15:21.923] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "review.ejs"
+[2022-09-17T12:15:39.300] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("/review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+ENOENT: no such file or directory, open '/review.ejs'
+[2022-09-17T12:15:40.734] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("/review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+ENOENT: no such file or directory, open '/review.ejs'
+[2022-09-17T12:15:48.886] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("../review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:16:30.595] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("../review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:16:31.866] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("../review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:18:03.862] [ERROR] application - /app/views/shops/index.ejs:82
+    80| <!--                        <% for (let review of reviews) { %>-->
+    81| <!--                        <% review.shop = id %>-->
+ >> 82| <!--                        <%- include("../review.ejs", review) %>-->
+    83| <!--                        <% } %>-->
+    84|                     </div>
+    85|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:22:36.382] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:22:59.037] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:01.481] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:15.756] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:17.297] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:20.217] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:24:14.055] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name ? user_name : '' %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:28:25.835] [INFO] application - Application listening at :3000
