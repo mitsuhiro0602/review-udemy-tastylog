@@ -8,6 +8,7 @@ const favicon = require("serve-favicon");
 const app = express();
 
 const shopRouter = require('./routes/shop');
+const searchRouter = require('./routes/search')
 
 // Express settings
 app.set("view engine", "ejs");
@@ -51,6 +52,7 @@ app.use("/", require("./routes/index.js"));
 
 // shopを出力する
 app.use("/shops", shopRouter);
+app.use('/search', searchRouter);
 
 // Set application log.
 app.use(applicationlogger());

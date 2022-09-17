@@ -258,3 +258,6 @@ user_name is not defined
 
 user_name is not defined
 [2022-09-17T12:28:25.835] [INFO] application - Application listening at :3000
+[2022-09-17T22:29:31.798] [INFO] application - Application listening at :3000
+[2022-09-17T22:29:35.490] [ERROR] application - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY score DESC LIMIT 5 ) as shop LEFT JOIN t_shop_category ON shop.id = t_shop_ca' at line 1
+[2022-09-17T22:31:10.321] [INFO] application - Application listening at :3000
