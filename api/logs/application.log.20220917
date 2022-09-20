@@ -1,0 +1,351 @@
+[2022-09-17T12:10:44.512] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:12:16.204] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review"
+[2022-09-17T12:12:23.909] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:12:25.478] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:14:56.614] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "./review.ejs"
+[2022-09-17T12:15:21.923] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+Could not find the include file "review.ejs"
+[2022-09-17T12:15:39.300] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("/review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+ENOENT: no such file or directory, open '/review.ejs'
+[2022-09-17T12:15:40.734] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("/review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+ENOENT: no such file or directory, open '/review.ejs'
+[2022-09-17T12:15:48.886] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("../review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:16:30.595] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("../review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:16:31.866] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (let review of reviews) { %>
+    80|                         <% review.shop = id %>
+ >> 81|                         <%- include("../review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:18:03.862] [ERROR] application - /app/views/shops/index.ejs:82
+    80| <!--                        <% for (let review of reviews) { %>-->
+    81| <!--                        <% review.shop = id %>-->
+ >> 82| <!--                        <%- include("../review.ejs", review) %>-->
+    83| <!--                        <% } %>-->
+    84|                     </div>
+    85|                 </div>
+
+/app/views/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:22:36.382] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6|     <div class="col-sm-9">
+    7|         <div class="card bg-light mb-3 balloon">
+
+user_name is not defined
+[2022-09-17T12:22:59.037] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:01.481] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:15.756] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:17.297] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:23:20.217] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:24:14.055] [ERROR] application - /app/views/shops/index.ejs:81
+    79|                         <% for (var review of reviews) { %>
+    80|                             <% review.shop = id; %>
+ >> 81|                             <%- include("./review.ejs", review) %>
+    82|                         <% } %>
+    83|                     </div>
+    84|                 </div>
+
+/app/views/shops/review.ejs:4
+    2|     <div class="col-sm-3 text-truncate">
+    3|         <span class="h1"><i class="fa fa-fw fa-user"></i></span>
+ >> 4|         <span><%= user_name ? user_name : '' %></span>
+    5|     </div>
+    6| 
+    7|     <div class="col-sm-9">
+
+user_name is not defined
+[2022-09-17T12:28:25.835] [INFO] application - Application listening at :3000
+[2022-09-17T22:29:31.798] [INFO] application - Application listening at :3000
+[2022-09-17T22:29:35.490] [ERROR] application - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY score DESC LIMIT 5 ) as shop LEFT JOIN t_shop_category ON shop.id = t_shop_ca' at line 1
+[2022-09-17T22:31:10.321] [INFO] application - Application listening at :3000
+[2022-09-17T22:55:00.124] [ERROR] application - Unexpected token 'for' in /app/views/search/list.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+[2022-09-17T22:56:06.443] [ERROR] application - /app/views/search/list.ejs:11
+    9| <body>
+    10| <div class="outerframe">
+ >> 11|     <%- include("./_share/navbar.ejs") %>
+    12|     <main role="main" class="container">
+    13|         <div class="border-bottom">
+    14|             <form action="/search" method="GET" class="mt-5 mb-5">
+
+Could not find the include file "./_share/navbar.ejs"
+[2022-09-17T22:56:21.050] [ERROR] application - /app/views/search/list.ejs:17
+    15|                 <div class="form-group row justify-content-center">
+    16|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 17|                         <input type="text" id="keyword" name="keyword" value="<%= keyword %>" autofocus class="form-control" />
+    18|                         <div class="input-group-append">
+    19|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    20|                         </div>
+
+keyword is not defined
+[2022-09-17T22:56:54.638] [ERROR] application - /app/views/search/list.ejs:17
+    15|                 <div class="form-group row justify-content-center">
+    16|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 17|                         <input type="text" id="keyword" name="keyword" value="<%= keyword %>" autofocus class="form-control" />
+    18|                         <div class="input-group-append">
+    19|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    20|                         </div>
+
+keyword is not defined
+[2022-09-17T22:58:49.409] [ERROR] application - /app/views/search/list.ejs:20
+    18|                 <div class="form-group row justify-content-center">
+    19|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 20|                         <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" autofocus />
+    21|                         <div class="input-group-append">
+    22|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    23|                         </div>
+
+keyword is not defined
+[2022-09-17T22:58:51.309] [ERROR] application - /app/views/search/list.ejs:20
+    18|                 <div class="form-group row justify-content-center">
+    19|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 20|                         <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" autofocus />
+    21|                         <div class="input-group-append">
+    22|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    23|                         </div>
+
+keyword is not defined
+[2022-09-17T22:59:24.290] [ERROR] application - /app/views/search/list.ejs:20
+    18|                 <div class="form-group row justify-content-center">
+    19|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 20| <!--                        <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" autofocus />-->
+    21|                         <div class="input-group-append">
+    22|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    23|                         </div>
+
+keyword is not defined
+[2022-09-17T22:59:26.125] [ERROR] application - /app/views/search/list.ejs:20
+    18|                 <div class="form-group row justify-content-center">
+    19|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 20| <!--                        <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" autofocus />-->
+    21|                         <div class="input-group-append">
+    22|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    23|                         </div>
+
+keyword is not defined
+[2022-09-17T23:01:40.672] [ERROR] application - /app/views/search/list.ejs:20
+    18|                 <div class="form-group row justify-content-center">
+    19|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 20|                         <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" autofocus />
+    21|                         <div class="input-group-append">
+    22|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    23|                         </div>
+
+keyword is not defined
+[2022-09-17T23:01:42.146] [ERROR] application - /app/views/search/list.ejs:20
+    18|                 <div class="form-group row justify-content-center">
+    19|                     <div class="input-group mt-3 mb-3 col-sm-8">
+ >> 20|                         <input type="text" class="form-control" id="keyword" name="keyword" value="<%= keyword %>" autofocus />
+    21|                         <div class="input-group-append">
+    22|                             <button class="btn btn-secondary" type="submit"><i class="fa fa-fw fa-search"></i></button>
+    23|                         </div>
+
+keyword is not defined
+[2022-09-17T23:02:14.963] [INFO] application - Application listening at :3000
+[2022-09-17T23:32:59.451] [INFO] application - Application listening at :3000

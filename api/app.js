@@ -9,6 +9,7 @@ const app = express();
 
 const shopRouter = require('./routes/shop');
 const searchRouter = require('./routes/search')
+const AccountRouter = require('./routes/account')
 
 // Express settings
 app.set("view engine", "ejs");
@@ -31,29 +32,31 @@ app.use("/public", express.static(path.join(__dirname, "/public")));
 app.use(accesslogger());
 
 // Dynamic resource rooting.
-app.use("/", require("./routes/index.js"));
+// testのトランザクションをテストする
+app.get("/test", async (req, res, next) => {
+  const { MySQLClient } = require("./lib/database/client");
+  let tran;
+  try {
+    tran = await MySQLClient.beginTransaction();
+    await tran.executeQuery(
+      "UPDATE t_shop SET score=? WHERE id=?",
+      [4.00, 1]
+    );
+    // throw new Error('Test exception')
+    await tran.commit();
+    res.end('OK')
+  } catch (err) {
+    await tran.rollback()
+    next(err);
+  }
+});
 
-// testを出力する
-// app.use("/test", async (req, res, next) => {
-//   // promisifyは非同期化するためのメソッド
-//   const { MySQLClient, sql } = require('./lib/database/client')
-//
-//   let data;
-//   try {
-//     data = await MySQLClient.executeQuery(await sql("SELECT_SHOP_BASIC_BY_ID"), [1]);
-//     // data = await MySQLClient.query(await sql("SELECT_SHOP_BASIC_BY_ID"), [1]);
-//     console.log(data);
-//     console.log('接続に成功しました')
-//   } catch (err){
-//     next(err)
-//   }
-//   res.end('OK');
-// });
+app.use("/", require("./routes/index.js"));
 
 // shopを出力する
 app.use("/shops", shopRouter);
 app.use('/search', searchRouter);
-
+app.use('/account', AccountRouter)
 // Set application log.
 app.use(applicationlogger());
 
