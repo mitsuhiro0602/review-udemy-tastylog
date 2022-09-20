@@ -15,6 +15,22 @@ const createReviewDate = (req) => {
 	}
 }
 
+const validateReviewData = (req) => {
+	const body = req.body;
+	let isValid = true, error = {};
+
+	if(body.visit && !moment(body.visit, DATE_FORMAT).isValid()) {
+		isValid = false
+		error.visit = "訪問日の日付文字列が不正です";
+	}
+
+	if(isValid) {
+		return undefined;
+	}
+	return error;
+
+}
+
 router.get("/regist/:shopId(\\d+)", async (req,res, next) => {
 	let shopId = req.params.shopId;
 	let shop, shopName, review, results;
@@ -35,7 +51,14 @@ router.get("/regist/:shopId(\\d+)", async (req,res, next) => {
 
 router.post('/regist/confirm', (req, res) => {
 	let review = createReviewDate(req)
+	let error = validateReviewData(req);
 	let { shopId, shopName } = req.body;
+
+	if(error) {
+		res.render("./account/reviews/regist-form.ejs", { error, shopId, shopName, review })
+		return;
+	}
+
 	res.render('./account/reviews/regist-confirm.ejs', { shopId, shopName, review });
 });
 
