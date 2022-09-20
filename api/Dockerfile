@@ -1,4 +1,4 @@
-FROM node:14.8.0
+FROM node:14.15.4
 WORKDIR /usr/src/app
 # アプリケーションの依存関係をインストールする
 # ワイルドカードを使用して、package.json と package-lock.json の両方が確実にコピーされるようにします。
