@@ -31,6 +31,10 @@ app.use("/public", express.static(path.join(__dirname, "/public")));
 // Set access log.
 app.use(accesslogger());
 
+// Set middleware
+// formの内容を読むことができるもの。
+app.use(express.urlencoded({ extended: true }));
+
 // Dynamic resource rooting.
 // testのトランザクションをテストする
 app.get("/test", async (req, res, next) => {
