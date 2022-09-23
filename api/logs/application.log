@@ -1,26 +1,5 @@
-[2022-09-19T08:12:34.766] [INFO] application - Application listening at :3000
-[2022-09-19T08:12:43.402] [ERROR] application - The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
-[2022-09-19T08:14:16.773] [INFO] application - Application listening at :3000
-[2022-09-19T08:16:25.507] [INFO] application - Application listening at :3000
-[2022-09-19T15:47:31.660] [ERROR] application - /app/views/account/reviews/regist-form.ejs:4
-    2| <html lang="ja">
-    3| <head>
- >> 4|     <%- include("../_share/metadata.ejs") %>
-    5|     <title>Shop</title>
-    6|     <%- include("../_share/stylesheets.ejs") %>
-    7|     <link rel="stylesheet" href="/public/stylesheets/shop.css" />
-
-Could not find the include file "../_share/metadata.ejs"
-[2022-09-19T17:51:59.513] [INFO] application - Application listening at :3000
-[2022-09-20T15:31:39.454] [INFO] application - Application listening at :3000
-[2022-09-20T15:32:23.947] [INFO] application - Application listening at :3000
-[2022-09-20T17:04:33.616] [INFO] application - Application listening at :3000
-[2022-09-20T17:05:15.433] [ERROR] application - Cannot read property 'isValid' of undefined
-[2022-09-20T17:07:02.588] [INFO] application - Application listening at :3000
-[2022-09-20T17:47:10.292] [INFO] application - Application listening at :3000
-[2022-09-20T18:06:36.241] [INFO] application - Application listening at :3000
-[2022-09-20T18:13:36.698] [INFO] application - Application listening at :3000
-[2022-09-20T18:19:04.591] [INFO] application - Application listening at :3000
-[2022-09-20T18:30:36.016] [INFO] application - Application listening at :3000
-[2022-09-20T19:19:24.595] [INFO] application - Application listening at :3000
-[2022-09-22T08:27:45.832] [INFO] application - Application listening at :3000
+[2022-09-23T09:24:59.351] [INFO] application - Application listening at :3000
+[2022-09-23T10:02:21.932] [INFO] application - Application listening at :3000
+[2022-09-23T10:32:31.680] [INFO] application - Application listening at :3000
+[2022-09-23T10:35:51.674] [INFO] application - Application listening at :3000
+[2022-09-23T10:37:09.638] [INFO] application - Application listening at :3000

@@ -1,6 +1,6 @@
-/* eslint-disable */
 var btnSubmit_onclick = function (event) {
 	var $submit = $(this);
+
 	var $form = $submit.parents("form");
 	$form.attr("method", $submit.data("method"));
 	$form.attr("action", $submit.data("action"));
