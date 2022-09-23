@@ -3,3 +3,13 @@
 [2022-09-23T10:32:31.680] [INFO] application - Application listening at :3000
 [2022-09-23T10:35:51.674] [INFO] application - Application listening at :3000
 [2022-09-23T10:37:09.638] [INFO] application - Application listening at :3000
+[2022-09-23T10:59:39.957] [ERROR] application - /app/views/account/reviews/regist-complete.ejs:20
+    18|         </div>
+    19|         <div class="text-center my-5">
+ >> 20|             <a class="btn btn-outline-primary" href="/shops/<%= shopId %>">ショップページへ戻る</a>
+    21|         </div>
+    22|     </main>
+    23|     <%- include("../../_share/footer.ejs") %>
+
+shopId is not defined
+[2022-09-23T11:01:46.779] [INFO] application - Application listening at :3000

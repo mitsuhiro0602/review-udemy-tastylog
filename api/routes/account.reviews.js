@@ -100,7 +100,7 @@ router.post("/regist/execute", async (req, res, next) => {
 		next(err);
 	}
 
-	res.render("./account/reviews/regist-complete.ejs");
+	res.render("./account/reviews/regist-complete.ejs", { shopId });
 });
 
 module.exports = router;

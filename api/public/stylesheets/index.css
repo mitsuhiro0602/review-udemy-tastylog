@@ -3,7 +3,6 @@
 }
 
 .outerframe main {
-  display: flex;
   position: absolute;
   padding-top: 3.5rem;
   top: 0;
