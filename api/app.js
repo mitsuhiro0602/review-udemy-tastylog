@@ -8,8 +8,9 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const cookie = require('cookie-parser');
 const session = require('express-session')
-const MySqlStore = require("express-mysql-session")(session);
+const MySQLStore = require("express-mysql-session")(session);
 const app = express();
+const mysql2 = require('mysql2/promise');
 
 const shopRouter = require('./routes/shop');
 const searchRouter = require('./routes/search')
@@ -34,27 +35,29 @@ app.use("/public", express.static(path.join(__dirname, "/public")));
 
 // Set access log.
 app.use(accesslogger());
+const mysqlOptions = {
+  host: 'db',
+  port: dbconfig.PORT,
+  user: dbconfig.USERNAME,
+  password: dbconfig.PASSWORD,
+  database: dbconfig.DATABASE
+};
 
-// const mysqlOptions = {
-//   host: 'db',
-//   port: dbconfig.PORT,
-//   user: dbconfig.USERNAME,
-//   password: dbconfig.PASSWORD,
-//   database: dbconfig.DATABASE
-// };
-
+const connection = mysql2.createPool(mysqlOptions);
+const mysqlSessionStore = new MySQLStore({}, connection);
 
 // Set middleware
 app.use(cookie());
 app.use(
   session({
-  store: new MySqlStore({
-    host: 'db',
-    port: dbconfig.PORT,
-    user: dbconfig.USERNAME,
-    password: dbconfig.PASSWORD,
-    database: dbconfig.DATABASE
-  }),
+  // store: new MySqlStore({
+  //   host: 'db',
+  //   port: dbconfig.PORT,
+  //   user: dbconfig.USERNAME,
+  //   password: dbconfig.PASSWORD,
+  //   database: dbconfig.DATABASE
+  // }),
+  store: mysqlSessionStore,
   secret: appconfig.security.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,

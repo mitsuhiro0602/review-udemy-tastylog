@@ -35,3 +35,5 @@
 [2022-09-24T21:51:40.309] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
 [2022-09-24T21:51:45.167] [ERROR] application - connect ECONNREFUSED 127.0.0.1:3307
 [2022-09-24T22:04:06.171] [INFO] application - Application listening at :3000
+[2022-09-24T22:20:24.020] [INFO] application - Application listening at :3000
+[2022-09-24T22:29:04.032] [INFO] application - Application listening at :3000
