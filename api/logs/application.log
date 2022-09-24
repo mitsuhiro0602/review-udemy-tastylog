@@ -38,3 +38,5 @@
 [2022-09-24T22:20:24.020] [INFO] application - Application listening at :3000
 [2022-09-24T22:29:04.032] [INFO] application - Application listening at :3000
 [2022-09-24T22:48:44.896] [INFO] application - Application listening at :3000
+[2022-09-24T23:13:18.260] [INFO] application - Application listening at :3000
+[2022-09-24T23:13:23.463] [ERROR] application - Failed to lookup view "./account/login.ejs" in views directory "/app/views"
