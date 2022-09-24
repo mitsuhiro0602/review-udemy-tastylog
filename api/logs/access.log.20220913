@@ -1,2 +1,0 @@
-[2022-09-13T11:11:15.826] [INFO] access - ::ffff:172.18.0.1 - - "GET / HTTP/1.1" 200 2660 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
-[2022-09-13T11:40:41.587] [WARN] access - ::ffff:172.18.0.1 - - "GET / HTTP/1.1" 304 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
